@@ -14,7 +14,7 @@ public class Building {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String category;
+    private String name;
     private double latitude;
     private double longitude;
     private String description;
