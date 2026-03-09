@@ -19,4 +19,7 @@ public class Node {
 
     private Node shortestPath;
 
+    public Map<Node,Integer> getNeighbors() {
+        return neighbours;
+    }
 }
