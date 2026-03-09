@@ -8,15 +8,17 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class BuildingMapper {
-    public static BuildingRequest toEntity(BuildingRequest request){
-        return new BuildingRequest(
-                request.getName(),
-                request.getLatitude(),
-                request.getLongitude(),
-                request.getDescription()
-        );
+    public  Building toEntity(BuildingRequest request){
+        Building building= new Building();
+               building.setName(request.getName());
+               building.setDescription(request.getDescription());
+               building.setLongitude(request.getLongitude());
+               building.setLatitude(request.getLatitude());
+
+               return building;
+
     }
-    public static BuildingResponse toResponse(Building building){
+    public  BuildingResponse toResponse(Building building){
         return new BuildingResponse(
                 building.getId(),
                 building.getName(),
