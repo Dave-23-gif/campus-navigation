@@ -19,7 +19,16 @@ public class Node {
 
     private Node shortestPath;
 
+    public Node(String name) {
+        this.name = name;
+    }
+
+
     public Map<Node,Integer> getNeighbors() {
         return neighbours;
+    }
+
+    public void addNeighbor(Node destination, int distance) {
+        neighbours.put(destination, distance);
     }
 }
